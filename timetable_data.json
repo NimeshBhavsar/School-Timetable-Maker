@@ -42,7 +42,6 @@
     "ABP",
     "JPB",
     "NAD",
-    "NNK",
     "BKC",
     "VAS",
     "NMR",
@@ -56,7 +55,11 @@
     "History",
     "Geography",
     "Sanskrit",
-    "Marathi"
+    "Marathi",
+    "Water Safety",
+    "Scout Guide",
+    "Computer",
+    "Drawing"
   ],
   "teacher_subjects": {
     "NNK": [
@@ -100,8 +103,10 @@
       "Science"
     ],
     "SJB": [
+      "Math",
       "Science",
-      "Math"
+      "Water Safety",
+      "Computer"
     ]
   },
   "entries": [
@@ -111,6 +116,41 @@
       "slot": "P1",
       "subject": "Geography",
       "teacher": "JPB"
+    },
+    {
+      "class_section": "8-A",
+      "day": "Monday",
+      "slot": "P1",
+      "subject": "Math",
+      "teacher": "SJB"
+    },
+    {
+      "class_section": "8-A",
+      "day": "Tuesday",
+      "slot": "P1",
+      "subject": "Science",
+      "teacher": "SJB"
+    },
+    {
+      "class_section": "8-A",
+      "day": "Tuesday",
+      "slot": "P2",
+      "subject": "Math",
+      "teacher": "SJB"
+    },
+    {
+      "class_section": "8-A",
+      "day": "Wednesday",
+      "slot": "P1",
+      "subject": "Water Safety",
+      "teacher": "SJB"
+    },
+    {
+      "class_section": "8-A",
+      "day": "Thursday",
+      "slot": "P2",
+      "subject": "Math",
+      "teacher": "SJB"
     }
   ]
 }

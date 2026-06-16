@@ -135,6 +135,45 @@ with st.sidebar:
             save_current_data(sample)
             st.rerun()
 
+    with st.expander("Manage teachers"):
+        st.caption("Quickly add or remove teachers and assign subjects.")
+        new_name = st.text_input("New teacher name", key="new_teacher_name")
+        new_subjects = st.multiselect(
+            "Assign subjects",
+            options=st.session_state.data.subjects,
+            default=[],
+            key="new_teacher_subjects",
+        )
+        if st.button("Add teacher", use_container_width=True):
+            name = (new_name or "").strip()
+            if not name:
+                st.warning("Please enter a teacher name.")
+            elif name in st.session_state.data.teachers:
+                st.warning("Teacher already exists.")
+            else:
+                d = st.session_state.data
+                d.teachers.append(name)
+                d.teacher_subjects[name] = list(new_subjects)
+                save_current_data(d)
+                st.success(f"Added teacher: {name}")
+                st.rerun()
+
+        st.markdown("---")
+        if st.session_state.data.teachers:
+            remove = st.selectbox("Remove teacher", st.session_state.data.teachers, key="remove_teacher_select")
+            if st.button("Remove teacher", use_container_width=True):
+                d = st.session_state.data
+                if remove in d.teachers:
+                    d.teachers.remove(remove)
+                    d.teacher_subjects.pop(remove, None)
+                    # remove any timetable entries for this teacher
+                    d.entries = [e for e in d.entries if e.get("teacher") != remove]
+                    save_current_data(d)
+                    st.success(f"Removed teacher: {remove}")
+                    st.rerun()
+        else:
+            st.info("No teachers available to remove.")
+
     st.divider()
     st.subheader("Load / export")
     uploaded = st.file_uploader("Import JSON", type=["json"])
@@ -157,9 +196,6 @@ with st.sidebar:
 
 render_status()
 
-st.markdown(
-    f"**Daily structure:** Period 1-5, Break, Period 6-10. Break is fixed after period {BREAK_AFTER_SLOT}."
-)
 
 editor_tab, view_tab, data_tab = st.tabs(["Timetable editor", "Timetable views", "Data summary"])
 

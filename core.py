@@ -11,7 +11,7 @@ import pandas as pd
 
 DEFAULT_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 DEFAULT_SLOTS = [f"P{i}" for i in range(1, 11)]
-BREAK_AFTER_SLOT = 5
+BREAK_AFTER_SLOT = 4
 
 
 @dataclass
