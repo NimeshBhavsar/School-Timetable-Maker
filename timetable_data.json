@@ -1,0 +1,116 @@
+{
+  "school_name": "Nutan Vidya Mandir Timetable",
+  "days": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ],
+  "slots": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "BREAK",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9"
+  ],
+  "classes": [
+    "8-A",
+    "8-B",
+    "8-C",
+    "8-D",
+    "9-A",
+    "9-B",
+    "9-C",
+    "9-D",
+    "10-A",
+    "10-B",
+    "10-C",
+    "10-D"
+  ],
+  "teachers": [
+    "NNK",
+    "NKMu",
+    "SDG",
+    "PKG",
+    "ABP",
+    "JPB",
+    "NAD",
+    "NNK",
+    "BKC",
+    "VAS",
+    "NMR",
+    "SJB"
+  ],
+  "subjects": [
+    "Math",
+    "Science",
+    "English",
+    "Hindi",
+    "History",
+    "Geography",
+    "Sanskrit",
+    "Marathi"
+  ],
+  "teacher_subjects": {
+    "NNK": [
+      "Math",
+      "Science"
+    ],
+    "NKMu": [
+      "English",
+      "Hindi"
+    ],
+    "SDG": [
+      "History",
+      "Geography"
+    ],
+    "PKG": [
+      "Math",
+      "Science"
+    ],
+    "ABP": [
+      "English",
+      "Hindi"
+    ],
+    "JPB": [
+      "History",
+      "Geography"
+    ],
+    "NAD": [
+      "Math",
+      "Science"
+    ],
+    "BKC": [
+      "English",
+      "Hindi"
+    ],
+    "VAS": [
+      "History",
+      "Geography"
+    ],
+    "NMR": [
+      "Math",
+      "Science"
+    ],
+    "SJB": [
+      "Science",
+      "Math"
+    ]
+  },
+  "entries": [
+    {
+      "class_section": "8-C",
+      "day": "Monday",
+      "slot": "P1",
+      "subject": "Geography",
+      "teacher": "JPB"
+    }
+  ]
+}
